@@ -1,12 +1,12 @@
 {
   "name": "token-tooltip-alt",
-  "version": "3.2.2-valk",
+  "version": "3.3.0",
   "description": "A module that adds a fully customizable tooltip next to the currently hovered token to show some useful information for players and DMs.",
   "main": "module.json",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bmarian/token-tooltip-alt.git"
+    "url": "git+https://github.com/msprijatelj/token-tooltip-alt.git"
   },
   "author": {
     "name": "bmarian",
@@ -15,9 +15,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bmarian/token-tooltip-alt/issues"
+    "url": "https://github.com/msprijatelj/token-tooltip-alt/issues"
   },
-  "homepage": "https://github.com/bmarian/token-tooltip-alt#readme",
+  "homepage": "https://github.com/msprijatelj/token-tooltip-alt#readme",
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
