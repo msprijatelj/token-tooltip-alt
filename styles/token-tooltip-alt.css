@@ -155,5 +155,9 @@
 .token-tooltip-alt-tooltip-container.default.dark .token-tooltip-alt-tooltip-item span {
   color: white;
 }
+/* Tell Bar Brawl to share the Resource tab */
+.bar-container {
+	height: auto;
+}
 
 /*# sourceMappingURL=token-tooltip-alt.css.map */
