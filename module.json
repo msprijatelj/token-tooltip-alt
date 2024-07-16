@@ -17,20 +17,22 @@
     "https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
   ],
-  "dependencies": [
-    {
-      "id": "_CodeMirror",
-      "name": "_CodeMirror",
-      "type": "module",
-      "manifest": "https://raw.githubusercontent.com/League-of-Foundry-Developers/codemirror-lib/master/module.json"
-    }
-  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "_CodeMirror",
+        "name": "_CodeMirror",
+        "type": "module",
+        "manifest": "https://raw.githubusercontent.com/League-of-Foundry-Developers/codemirror-lib/master/module.json"
+      }
+    ]
+  },
   "styles": [
     "styles/token-tooltip-alt.css"
   ],
   "compatibility": {
     "minimum": "11",
-    "verified": "11"
+    "verified": "12"
   },
   "languages": [
     {
@@ -57,6 +59,10 @@
   "media": [
     {
       "type": "icon",
+      "url": "https://i.imgur.com/V3n665D.png"
+    },
+    {
+      "type": "setup",
       "url": "https://i.imgur.com/V3n665D.png"
     }
   ],
