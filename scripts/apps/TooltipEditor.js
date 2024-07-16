@@ -269,7 +269,7 @@ export default class TooltipEditor extends FormApplication {
   }
 
   async _updateObject(event, formData) {
-    const expObj = expandObject(formData);
+    const expObj = foundry.utils.expandObject(formData);
     const type = this?.object?.actorType;
     const gmSettings = this._getSetting(TTAConstants.SETTING_KEYS.GM_SETTINGS);
     const playerSettings = this._getSetting(TTAConstants.SETTING_KEYS.PLAYER_SETTINGS);

@@ -122,7 +122,9 @@ export default class TooltipManager extends FormApplication {
   }
 
   _getEntityTypes() {
-    return Object.keys(game?.system?.model?.Actor);
+    if (game.release.generation < 12)
+      return Object.keys(game?.system?.model?.Actor ?? {});
+    return Object.keys(game.model?.Actor ?? {}).filter(k => k !== "base");
   }
 
   // generate a list of actors, to delete it just use in the console
@@ -188,7 +190,7 @@ export default class TooltipManager extends FormApplication {
   // this SHOULD be light weight enough to not create any problems and
   // to keep the UX nice
   async _updateObject(event, formData) {
-    const expObj = expandObject(formData);
+    const expObj = foundry.utils.expandObject(formData);
     const actors = this._getSetting(TTAConstants.SETTING_KEYS.ACTORS);
     for (const key in expObj) {
       if (!expObj.hasOwnProperty(key)) continue;
