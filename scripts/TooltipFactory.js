@@ -116,10 +116,6 @@ class TooltipFactory {
     return game?.keyboard?.downKeys?.has?.('AltLeft') || game?.keyboard?.downKeys?.has?.('AltRight');
   }
 
-  _isDragging(){
-    return game?.mouse?.
-  }
-
   // public hook when hovering over a token (more precise when a token is focused)
   async hoverToken(token, isHovering) {
     if (!token?.actor || !this._shouldActorHaveTooltip(token)) {
