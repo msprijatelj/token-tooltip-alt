@@ -116,6 +116,10 @@ class TooltipFactory {
     return game?.keyboard?.downKeys?.has?.('AltLeft') || game?.keyboard?.downKeys?.has?.('AltRight');
   }
 
+  _isDragging(){
+    return game?.mouse?.
+  }
+
   // public hook when hovering over a token (more precise when a token is focused)
   async hoverToken(token, isHovering) {
     if (!token?.actor || !this._shouldActorHaveTooltip(token)) {
@@ -133,6 +137,14 @@ class TooltipFactory {
       }
     }
     this[isHovering ? '_addTooltip' : '_removeTooltip'](token);
+  }
+
+  // public hook when a token is updated
+  // Whenever the token is updated, check it's interaction state for if the token is in dragging state.
+  async updateToken(token){
+      if(token.interactionState === MouseInteractionManager.INTERACTION_STATES.DRAG){
+        removeTooltips();
+      }
   }
 
   // public hook to remove all tooltips
