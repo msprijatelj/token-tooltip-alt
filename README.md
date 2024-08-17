@@ -6,6 +6,8 @@
 
 A module that adds a fully customizable tooltip next to the currently hovered token to show some useful information for players and DMs.
 
+All thanks go to [bmarian](https://github.com/bmarian) for creating the original module.
+
 # Installation
 - Go in the `Add-on Modules` section
 - Click `Install Module`
