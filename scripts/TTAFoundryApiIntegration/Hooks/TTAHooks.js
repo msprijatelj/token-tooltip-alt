@@ -45,6 +45,7 @@ const hookHandlers = {
   canvasInitHandler() {
     return addHookHandler('canvasInit', HOOK_TYPE.ONCE, () => {
       window.addEventListener('blur', TooltipFactory.removeTooltips.bind(TooltipFactory));
+      window.addEventListener('keydown', TooltipFactory.altPressed.bind(TooltipFactory));
       window.addEventListener('keyup', (evt) => {
         if (evt.key === 'Alt') TooltipFactory.removeTooltips();
       });

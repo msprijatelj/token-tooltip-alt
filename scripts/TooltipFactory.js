@@ -121,25 +121,37 @@ class TooltipFactory {
     if (!token?.actor || !this._shouldActorHaveTooltip(token)) {
       return;
     }
-    const isAltPressed = this._isAltPressed();
-    if (isAltPressed) {
-      const altSettings = this._getAltSettings();
-      if (!altSettings.showOnAlt) {
-        return;
-      }
-      const isTokenHidden = token?.data?.hidden;
-      if (altSettings.showOnAlt && !altSettings.showAllOnAlt && isTokenHidden) {
-        return;
-      }
-    }
     this[isHovering ? '_addTooltip' : '_removeTooltip'](token);
+  }
+
+  // public hook to show tooltips when ALT is pressed
+  async altPressed() {
+    canvas.tokens.placeables.forEach((token) => {
+      if (!token?.actor || !this._shouldActorHaveTooltip(token)) {
+        return;
+      }
+      const isAltPressed = this._isAltPressed();
+      if (isAltPressed) {
+        const altSettings = this._getAltSettings();
+        // Foundry doesn't set a token's worldTransform until the token is rendered on the client's screen.
+        // This means that while showAllOnAlt is true, hidden tokens that have yet to be viewed all put
+        // their tooltips at (0, 0). Given how this is an inconvenient spot on the screen, I implement a
+        // check if the token.worldTransform is exactly at (0, 0), assuming it hasn't rendered yet.
+        if (
+          (altSettings.showAllOnAlt && !(token.worldTransform.tx === 0 && token.worldTransform.ty === 0))
+          || (altSettings.showOnAlt && !altSettings.showAllOnAlt && token.isVisible)
+        ) {
+          this._addTooltip(token);
+        }
+      }
+    });
   }
 
   // public hook when a token is updated
   // Whenever the token is updated, check it's interaction state for if the token is in dragging state.
-  async updateToken(token){
-    if(token.interactionState === MouseInteractionManager.INTERACTION_STATES.DRAG){
-      this['_removeTooltip'](token);
+  async updateToken(token) {
+    if (token.interactionState === MouseInteractionManager.INTERACTION_STATES.DRAG) {
+      this._removeTooltip(token);
     }
   }
 
