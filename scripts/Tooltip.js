@@ -254,22 +254,22 @@ class Tooltip {
     if (!this._tooltipInfo.isGM) {
       // here I do some logic that I don't really like but I can't find a good way of doing it
 
-      // adding a +1 because the numbers start from -1 (hostile)
-      const tokenDisposition = parseInt(tokenDataSource?.disposition, 10) + 1;
-      const index = staticData?.tokenDispositions?.indexOf(staticData.displayNameInTooltip);
       // Fix for NONE and OWNED
       // albions-angel: fix for CONST?.ENTITY_PERMISSIONS?.OBSERVER
       // albions-angel: now changed to CONST.DOCUMENT_OWNERSHIP_LEVELS as of V10
-      if (index === -1) {
+      if (!(staticData.displayNameInTooltip in CONST.TOKEN_DISPOSITIONS)) {
         if (staticData.displayNameInTooltip === this._appKeys.NONE_DISPOSITION) return null;
         return staticData.displayNameInTooltip === this._appKeys.OWNED_DISPOSITION
         && this._token?.actor?.permission >= CONST?.DOCUMENT_OWNERSHIP_LEVELS?.OBSERVER ? tokenName : null;
       }
+      const tokenDisposition = parseInt(tokenDataSource?.disposition, 10);
+      const displayThreshold = CONST.TOKEN_DISPOSITIONS[staticData.displayNameInTooltip];
+
       // Example: ['HOSTILE', 'NEUTRAL', 'FRIENDLY'] <=> [-1, 0, 1]
-      // tokenDisposition = -1 + 1 (0) <=> HOSTILE
-      // index = indexOf('FRIENDLY') <=> 2
-      // In this case we don't want to show the name so: index > tokenDisposition => NO NAME
-      if (index <= tokenDisposition) {
+      // tokenDisposition = -1 <=> HOSTILE
+      // displayThreshold = CONST.TOKEN_DISPOSITIONS['FRIENDLY'] <=> 1
+      // In this case we don't want to show the name so: displayThreshold > tokenDisposition => NO NAME
+      if (displayThreshold <= tokenDisposition) {
         return tokenName;
       }
     }
