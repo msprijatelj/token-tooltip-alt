@@ -146,7 +146,7 @@ class Tooltip {
       icon: htmlType ? icon.substring(1) : icon,
       htmlType,
       iconType,
-      iconSize: this._fontSize,
+      ttaIconSize: this._fontSize,
     };
   }
 
