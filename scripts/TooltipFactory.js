@@ -150,7 +150,7 @@ class TooltipFactory {
   // public hook when a token is updated
   // Whenever the token is updated, check it's interaction state for if the token is in dragging state.
   async updateToken(token) {
-    if (token.interactionState === MouseInteractionManager.INTERACTION_STATES.DRAG) {
+    if (token.interactionState === foundry.canvas.interaction.MouseInteractionManager.INTERACTION_STATES.DRAG) {
       this._removeTooltip(token);
     }
   }

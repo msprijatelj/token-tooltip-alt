@@ -2,7 +2,7 @@ import doMath from './lib/MathEngine.js';
 import DeferredPromise from './lib/DeferredPromise.js';
 import { TTAConstants } from './TTAConstants/TTAConstants.js';
 import { getSetting } from './TTAFoundryApiIntegration/Settings/TTASettingsUtils.js';
-import { clone, debug, MODULE_NAME, } from './TTAUtils/TTAUtils.js';
+import { clone, debug, MODULE_NAME } from './TTAUtils/TTAUtils.js';
 
 class Tooltip {
   constructor(
@@ -225,7 +225,7 @@ class Tooltip {
     const disposition = dispositionsWithoutOwned?.[parseInt(this._token?.document?.disposition, 10) + 2];
 
     // albions-angel: fixed >= which should have been >
-    // albions-angel: fix for CONST?.ENTITY_PERMISSIONS?.OBSERVER 
+    // albions-angel: fix for CONST?.ENTITY_PERMISSIONS?.OBSERVER
     // albions-angel: now changed to CONST.DOCUMENT_OWNERSHIP_LEVELS as of V10
     if (this._tooltipInfo.isGM) {
       return disposition;
@@ -334,7 +334,7 @@ class Tooltip {
       numberOfColumns: columns.length,
     };
     debug(templateData);
-    return renderTemplate(this._template, templateData);
+    return foundry.applications.handlebars.renderTemplate(this._template, templateData);
   }
 
   // populates the tooltip container with the build content, and returns if the tooltip has content
