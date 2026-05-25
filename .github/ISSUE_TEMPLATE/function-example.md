@@ -3,7 +3,6 @@ name: Function example
 about: Suggest a new function example
 title: "[FE] Short description"
 labels: ''
-assignees: msprijatelj
 
 ---
 

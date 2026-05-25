@@ -334,7 +334,7 @@ class Tooltip {
       numberOfColumns: columns.length,
     };
     debug(templateData);
-    return renderTemplate(this._template, templateData);
+    return foundry.applications.handlebars.renderTemplate(this._template, templateData);
   }
 
   // populates the tooltip container with the build content, and returns if the tooltip has content

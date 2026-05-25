@@ -3,7 +3,6 @@ name: Expression example
 about: Suggest a new expression example
 title: "[EE] Short description"
 labels: documentation
-assignees: bmarian
 
 ---
 
