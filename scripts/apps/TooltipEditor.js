@@ -83,7 +83,7 @@ export default class TooltipEditor extends FormApplication {
         color: generateRandomColor(),
       },
     };
-    const $newRow = $(await renderTemplate(TTAConstants.TEMPLATES.TOOLTIP_EDITOR_TABLE_ROW, data));
+    const $newRow = $(await foundry.applications.handlebars.renderTemplate(TTAConstants.TEMPLATES.TOOLTIP_EDITOR_TABLE_ROW, data));
     $tbody.append($newRow);
     // Make this... not shit... maybe...
     // Future me here... this is not what I was talking about... but It's future future me problem now...

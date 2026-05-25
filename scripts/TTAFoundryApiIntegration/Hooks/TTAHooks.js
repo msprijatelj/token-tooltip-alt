@@ -70,8 +70,7 @@ const hookHandlers = {
   },
   renderTokenConfigHandler() {
     return addHookHandler('renderTokenConfig', HOOK_TYPE.ON, (tokenConfig, $tokenConfig) => {
-      const tokenConfigElement = $tokenConfig[0];
-      const resources = tokenConfigElement.querySelector('.tab[data-tab="resources"]');
+      const resources = $tokenConfig.querySelector('.tab[data-tab="resources"]');
       const config = tokenConfig.document || tokenConfig.object;
       const noTooltip = config.getFlag(MODULE_NAME, 'noTooltip');
       const noTooltipCheckboxElement = htmlToElement(`
