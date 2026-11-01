@@ -1,0 +1,85 @@
+{
+  "I18N.LANGUAGE": "Русский",
+  "I18N.MAINTAINERS": "jeremy-bane",
+
+  "token-tooltip-alt.TokenTooltipAlt": "Token Tooltip Alt",
+
+  "token-tooltip-alt.settings.TOOLTIP_POSITION.name": "Расположение подсказки",
+  "token-tooltip-alt.settings.TOOLTIP_POSITION.hint": "Определить расположение подсказки.",
+  "token-tooltip-alt.settings.TOOLTIP_POSITION.choices.top": "Сверху",
+  "token-tooltip-alt.settings.TOOLTIP_POSITION.choices.right": "Справа",
+  "token-tooltip-alt.settings.TOOLTIP_POSITION.choices.bottom": "Снизу",
+  "token-tooltip-alt.settings.TOOLTIP_POSITION.choices.left": "Слева",
+  "token-tooltip-alt.settings.TOOLTIP_POSITION.choices.overlay": "Наложить поверх",
+  "token-tooltip-alt.settings.TOOLTIP_POSITION.choices.surprise": "Удиви меня",
+  "token-tooltip-alt.settings.TOOLTIP_POSITION.choices.doubleSurprise": "Удиви меня сильнее",
+
+  "token-tooltip-alt.settings.FONT_SIZE.name": "Размер шрифта",
+  "token-tooltip-alt.settings.FONT_SIZE.hint": "Настроить размер шрифта в подсказке: от 1 до 2.5 кегельных пунктов.",
+  "token-tooltip-alt.settings.MAX_ROWS.name": "Максимальное количество рядов",
+  "token-tooltip-alt.settings.MAX_ROWS.hint": "Максимальное количество отображаемых рядов/колонок.",
+  "token-tooltip-alt.settings.DATA_SOURCE.name": "Источник данных",
+  "token-tooltip-alt.settings.DATA_SOURCE.hint": "Это продвинутый параметр: пожалуйста, не меняйте его значение, если вы не знаете, что делаете. Этот параметр определяет источник данных для отображения в подсказке.",
+  "token-tooltip-alt.settings.DARK_THEME.name": "Тёмная тема",
+  "token-tooltip-alt.settings.DARK_THEME.hint": "Применить тёмную тему для отображаемых подсказок.",
+  "token-tooltip-alt.settings.SHOW_ALL_ON_ALT.name": "Показывать все при нажатии <ALT>",
+  "token-tooltip-alt.settings.SHOW_ALL_ON_ALT.hint": "Показывать подсказку для каждого видимого токена в сцене.",
+  "token-tooltip-alt.settings.SHOW_TOOLTIP_FOR_HIDDEN_TOKENS.name": "Показывать всех, включая скрытые, при нажатии <ALT>",
+  "token-tooltip-alt.settings.SHOW_TOOLTIP_FOR_HIDDEN_TOKENS.hint": "Показывать подсказку для каждого токена в сцене, даже если некоторые из них скрыты. Не работает, если параметр 'Показывать все при нажатии <ALT>' отключён.",
+  "token-tooltip-alt.settings.ISOMETRIC.name": "Изометрически подсказки (в разработке)",
+  "token-tooltip-alt.settings.ISOMETRIC.hint": "Использовать изометрические подсказки, если выбрана изометрическая карта.",
+  "token-tooltip-alt.settings.DEBUG_OUTPUT.name": "Данные отладки",
+  "token-tooltip-alt.settings.DEBUG_OUTPUT.hint": "Показывать полезную отладочную информацию в консоли.",
+  "token-tooltip-alt.settings.TOOLTIP_MANAGER.name": "Управление подсказками",
+  "token-tooltip-alt.settings.TOOLTIP_MANAGER.label": "Управление подсказками",
+
+
+
+  "token-tooltip-alt.buttons.import": "Импорт",
+  "token-tooltip-alt.buttons.export": "Экспорт",
+  "token-tooltip-alt.buttons.save": "Сохранить",
+  "token-tooltip-alt.buttons.importFromDefault": "Импортировать настройки по умолчанию",
+  "token-tooltip-alt.buttons.add": "Добавить",
+  "token-tooltip-alt.buttons.copy": "Копировать",
+  "token-tooltip-alt.buttons.paste": "Вставить",
+
+
+
+  "token-tooltip-alt.tooltipManager.infoMessage": "Более подробную информацию можно найти по ссылке: ",
+
+  "token-tooltip-alt.tooltipManager.col.actor": "Актёр",
+  "token-tooltip-alt.tooltipManager.col.enable": "Включить",
+  "token-tooltip-alt.tooltipManager.col.custom": "Пользовательский",
+  "token-tooltip-alt.tooltipManager.col.edit": "Редактировать",
+
+
+
+
+  "token-tooltip-alt.tooltipEditor.col.color": "Цвет",
+  "token-tooltip-alt.tooltipEditor.col.icon": "Значок",
+  "token-tooltip-alt.tooltipEditor.col.value": "Значение",
+  "token-tooltip-alt.tooltipEditor.col.expression": "Выр",
+  "token-tooltip-alt.tooltipEditor.col.isFunction": "Фун",
+  "token-tooltip-alt.tooltipEditor.col.isNumber": "Цфр",
+  "token-tooltip-alt.tooltipEditor.col.delete": "Удалить",
+
+  "token-tooltip-alt.tooltipEditorGm.gmHeader": "Ведущий",
+  "token-tooltip-alt.tooltipEditorGm.settingsHeader": "Настройки",
+  "token-tooltip-alt.tooltipEditorGm.settings.displayName.name": "Отображение названия",
+  "token-tooltip-alt.tooltipEditorGm.settings.displayName.hint": "Отобразить название токена в подсказке.",
+  "token-tooltip-alt.tooltipEditorGm.settings.useAccentEverywhere.name": "Везде использовать акцентный цвет",
+  "token-tooltip-alt.tooltipEditorGm.settings.useAccentEverywhere.hint": "Везде использовать акцентный цвет, вместо пользовательских цветов.",
+  "token-tooltip-alt.tooltipEditorGm.settings.accentColor.name": "Акцентный цвет",
+  "token-tooltip-alt.tooltipEditorGm.settings.accentColor.hint": "Задать акцентный цвет для границ подсказки и названия.",
+
+
+
+  "token-tooltip-alt.tooltipEditorPlayer.playerHeader": "Игрок",
+  "token-tooltip-alt.tooltipEditorPlayer.settingsHeader": "Настройки",
+  "token-tooltip-alt.tooltipEditorPlayer.settings.displayName.name": "Отображение названия",
+  "token-tooltip-alt.tooltipEditorPlayer.settings.displayName.hint": "Отобразить название токена в подсказке, в зависимости от отношения.",
+  "token-tooltip-alt.tooltipEditorPlayer.settings.useAccentEverywhere.name": "Везде использовать акцентный цвет",
+  "token-tooltip-alt.tooltipEditorPlayer.settings.useAccentEverywhere.hint": "Везде использовать акцентный цвет, вместо пользовательских цветов.",
+  "token-tooltip-alt.tooltipEditorPlayer.settings.accentColor.name": "Акцентный цвет",
+  "token-tooltip-alt.tooltipEditorPlayer.settings.accentColor.hint": "Задать акцентный цвет для границ подсказки и названия."
+}
